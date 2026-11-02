@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050a12">
+  <meta name="description" content="ATLAS personal AI assistant">
+  <title>ATLAS — Personal AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true"><span>A</span></div>
+      <div class="brand-copy">
+        <div class="brand-name">ATLAS <span>AI</span></div>
+        <div class="brand-subtitle">PERSONAL INTELLIGENCE SYSTEM</div>
+      </div>
+      <div class="status"><i></i><span id="connectionStatus">CHECKING LINK</span></div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span class="eyebrow-line"></span> SYSTEM ONLINE <span class="eyebrow-line"></span></div>
+        <div class="core-wrap" aria-label="Animated blue ATLAS core">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+          <div class="core"><div class="core-inner"><span class="core-a">A</span><span class="core-label">ATLAS</span></div></div>
+          <div class="core-dot dot-one"></div><div class="core-dot dot-two"></div>
+        </div>
+        <h1>How can I help?</h1>
+        <p class="hero-copy">Your assistant. Your command. Now with a real AI connection.</p>
+        <div class="quick-stats">
+          <div><span class="stat-value" id="aiStatus">CONNECTING</span><span class="stat-label">AI STATUS</span></div>
+          <div><span class="stat-value">TEXT + VOICE</span><span class="stat-label">INPUT</span></div>
+          <div><span class="stat-value">NO CAMERA</span><span class="stat-label">PRIVACY MODE</span></div>
+        </div>
+      </section>
+      <section class="chat-panel">
+        <div class="panel-heading"><div><span class="tiny-pulse"></span> CONVERSATION</div><button id="clearBtn" class="text-button" type="button">CLEAR</button></div>
+        <div id="chatLog" class="chat-log" aria-live="polite">
+          <div class="message atlas-message"><div class="avatar">A</div><div class="bubble-wrap"><div class="sender">ATLAS <span>ASSISTANT</span></div><div class="bubble">Systems initialized. Connect to your deployed ATLAS server, enter your access code in settings, and then send a message. Your Gemini API key stays on the server.</div></div></div>
+        </div>
+        <form id="chatForm" class="composer">
+          <button id="micBtn" class="icon-button mic-button" type="button" aria-label="Start voice input" title="Voice input">🎙</button>
+          <input id="messageInput" type="text" autocomplete="off" maxlength="3000" placeholder="Message ATLAS..." aria-label="Message ATLAS">
+          <button id="sendBtn" class="send-button" type="submit" aria-label="Send message">➤</button>
+        </form>
+        <div id="voiceStatus" class="voice-status">VOICE INPUT READY · SPEECH SUPPORT DEPENDS ON YOUR BROWSER</div>
+      </section>
+      <section class="settings-panel">
+        <div class="panel-heading"><div>CONFIGURATION</div><span class="panel-tag">SETTINGS</span></div>
+        <label class="setting-row" for="serverUrl"><span><strong>ATLAS server URL</strong><small>Paste your deployed HTTPS server address</small></span><input id="serverUrl" type="url" inputmode="url" placeholder="https://your-app.onrender.com" autocomplete="url"></label>
+        <label class="setting-row" for="accessCode"><span><strong>ATLAS access code</strong><small>The code you set in the server dashboard</small></span><input id="accessCode" type="password" autocomplete="off" placeholder="Enter access code"></label>
+        <div class="setting-actions"><button id="saveConnection" class="secondary-button" type="button">SAVE & TEST CONNECTION</button><button id="forgetCode" class="text-button" type="button">FORGET CODE</button></div>
+        <label class="setting-row" for="voiceStyle"><span><strong>Voice profile</strong><small>Change speech speed and pitch</small></span><select id="voiceStyle"><option value="commander">Voice 1 · Commander</option><option value="companion">Voice 2 · Companion</option></select></label>
+        <label class="setting-row" for="systemVoice"><span><strong>Device voice</strong><small>Uses voices available on your Android device</small></span><select id="systemVoice"><option value="">Default system voice</option></select></label>
+        <label class="setting-row toggle-row" for="autoSpeak"><span><strong>Speak replies</strong><small>Read ATLAS's replies aloud</small></span><input id="autoSpeak" type="checkbox" checked></label>
+        <div class="notice"><strong>Security:</strong> Your Gemini API key belongs only in your hosting provider's environment variables. Never paste it into this page, index.html, or script.js. Your access code is kept in this browser tab's session storage and sent only to your ATLAS server. Avoid sharing your access code.</div>
+      </section>
+    </main>
+    <footer>ATLAS PERSONAL AI <span>·</span> BUILD 1.0 <span>·</span> NO CAMERA OR IMAGE FEATURES</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

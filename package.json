@@ -1,0 +1,10 @@
+{
+  "name": "atlas-personal-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ATLAS personal assistant with a secure server-side Gemini API connection",
+  "type": "module",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=20" },
+  "dependencies": { "express": "^5.1.0" }
+}
